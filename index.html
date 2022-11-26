@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>WEBBER - Home</title>
+    
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link rel="shortcut icon" type="image/x-icon" href="WRound.png" />
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BZLZ4S12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F7BZLZ4S12');
+  
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <style>
+html {
+  background-repeat: no-repeat;
+  background-size: 100%
+  scroll-behavior: smooth;
+  }
+body{
+     text-align: center;
+     font-family: sans-serif;
+  }
+  
+titel{
+    font-family: sans-serif;
+    color: white;
+    font-size: 70px;
+  
+  }
+  
+.bgtop{
+    background: url(onebg.jpg) repeat center;
+    background-size: cover;
+    height: 1000px;
+    position: relative;
+  }
+  
+untertitel{
+    color: white;
+  }
+  
+about{
+    font-family: sans-serif;
+    font-size: 20px;
+    color:grey;
+  }
+  
+.button {
+  border-radius: 4px;
+  background-color: #2968f0 ;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+available{
+  color:grey;
+}
+
+.footer {
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color:#2968f0;
+   color: white;
+   text-align: center;
+}
+
+date{
+  color:grey;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*Browser window Style */
+.container {
+  border: 3px solid #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.row {
+  padding: 10px;
+  background: #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.column {
+  float: left;
+}
+
+.left {
+  width: 15%;
+}
+
+.right {
+  width: 10%;
+}
+
+.middle {
+  width: 75%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.dot{
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+input[type=text] {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background-color: white;
+  margin-top: -8px;
+  height: 25px;
+  color: #666;
+  padding: 5px;
+}
+
+.bar {
+  width: 17px;
+  height: 3px;
+  background-color: #aaa;
+  margin: 3px 0;
+  display: block;
+}
+
+.content {
+  padding: 10px;
+}
+body {
+  margin:0;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #1f1f30;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/*Bar*/
+.active {
+  background-color: #2968f0;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #7471ad;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+.alert {
+  padding: 20px;
+  background-color: #2968f0;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+  opacity:0.8;
+  border-radius: 0px 0px 20px 20px;
+}
+@media screen and (min-width: 600px) {
+  titel {
+    font-size: 70px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  titel {
+    font-size: 40px;
+  }
+</style>
+
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <!--<div class="dropdown">
+    <button class="dropbtn">Products 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="onboarding.html">webberOS</a>
+      <a href="webberwrite.html" target="_blank">Webber Write</a>
+    
+    </div>
+  </div>  -->
+  <a href="https://webberannouncements.blogspot.com/" target=blank>Updates</a>
+  <a href="#section1">About</a>
+  <a href="#section2">Contact</a>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+</div>
+<div class="bgtop">
+ <titel>
+ <br>
+ <br>
+ <h1><tt>WEBBER</tt></h1>
+ </titel>
+ <untertitel>
+ <h2><tt>The web toolbox.</tt></h2>
+ </untertitel>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <a type="button" href="comingsoon.html" target="_blank" class="button"><span>Try WEBBER One</span></a>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+</div>
+ <div class="alert">
+Webber was designed for computers. Please make sure you enter WEBBER OS from a PC.
+</div>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+
+ <br>
+ <br>  
+    <available>
+    <h1>Available for most browsers</h1>
+    <br>
+    <br>
+    <img src="Chrome.png" alt="Chrome" style="width:100px;height:100px;">
+    <br>
+    <h3> Chrome </h3>
+    <br>
+    <br>
+    <img src="Edge.png" alt="Edge" style="width:100px;height:100px;">
+    <br>
+    <h3>Microsoft Edge</h3>
+</available>
+
+<br>
+<br>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="column left">
+      <span class="dot" style="background:#ED594A;"></span>
+      <span class="dot" style="background:#FDD800;"></span>
+      <span class="dot" style="background:#5AC05A;"></span>
+    </div>
+    <div class="column middle">
+      <input type="text" value="https://webber.neocities.org">
+    </div>
+    <div class="column right">
+      <div style="float:right">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </div>
+<div class="main" id="section1">
+<div class="content">
+<about>
+<br>
+<br>
+<p>
+<i><b>"</b> WEBBER is a free tool for your PC that gives you the power to do everything from one place. Work more productively and effectively than ever before!<br>
+The project was discontinued in 2020 and is re-launching next year!<b>"</b></i>
+  </p>
+   <br>
+   <p>-Clark Noeding, Founder of Webber</p>
+   <br>
+   <br>
+   <br>
+   <br>
+   </about>
+  </div>
+</div>
+</div>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="main" id="section2">
+<div class="footer">
+  <br><br><br><br><br>
+  
+   <p>&copy;	WEBBER, 2022</p>
+   <br>
+   <br>
+<a href ="mailto:clarknoeding2008@gmail.com"><img src="mail.png" width=40 height=40 hspace=10px></a>
+<a href ="https://www.instagram.com/webber.os" target="blank"><img src="instagram.png" width=40 height=40 hspace=10px></a>
+<a href="https://twitter.com/webber_os" target="blank"><img src="twitterblue.png" width=40 height=40 hspace=10px></a>
+<a href="https://discord.gg/uZ6MT8vnwT"><img src="discord.png" width=40 height=40 hspace=10px></a>
+<br>
+<br>
+<br>
+  </div>
+  <script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+</div>
+</body>
+</html>
