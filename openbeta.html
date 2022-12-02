@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webber One (V.1.0)</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F7BZLZ4S12"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F7BZLZ4S12');
+</script>
+</head>
+<body>
+<style>
+  html{
+    font-family:sans-serif;
+    text-align:center;
+}
+
+version{
+  text-align: top;
+  text-align: right;
+}
+
+h1{
+  color:#ddd;
+}
+
+body {
+  margin: 0; 
+  background-image: url('gradient.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover; 
+}
+
+.navbar {
+  overflow: hidden;
+  opacity: 0.8;
+  background-color: white;
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  border-radius: 20px 20px 20px 20px;
+
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  opacity: 0.8;
+  transition: 0.8s;
+
+}
+
+.navbar a:hover {
+  background: #dedddc;
+  color: black;
+    
+}
+
+.navbar a.active {
+  background-color: #2968f0;
+  color: white;
+}
+.navbar-right {
+  float: right;
+  
+}
+desktop{
+  float: left;
+  text-align:left;
+  margin:left;
+  bottom: 50%;
+  top:50%;
+}
+.navbar a:hover {opacity: 1}
+
+</style>
+
+<version>
+<p style=color:lightgrey;>V.1.0</p>
+</version>
+<!-- Zeitanzeige -->
+<body onload="startTime()">
+ <h2 style="color:white;font-size:70px;"> 
+<div id="txt"><b></b></div> <!-- Zeitanzeige: Text -->
+</h2>
+<br>
+<div class="desktop">
+<a href="#Google" onclick="google()"><img src="google.png" alt="Google Search" style="float: left; margin-left: 30px;" width=45 height=45></a>
+<br>
+<br>
+<br>
+<br>
+  <a href="#Help" target="popup" onclick="window.open('faq.html','popup','width=600,height=600'); return false;"><img src="help.png" alt="Webber FAQ" style= "float: left;margin-left: 30px;" width=45 height=45></a>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <a href="#Editor" onclick="editor()"><img src="editor.png" alt="Webber Write" style= "float: left;margin-left: 30px;" width=45 height=45></a>
+  </div>
+<!-- Taskleiste -->
+    <div class="navbar">
+  <a href="index.html" class="active"><img src="LogoNew.png" width=30 height=30></a>
+  
+  <a href="#Youtube" onclick="youtube()"><img src="youtube.png" width=30 height=30></a>
+  <a href="#Google" onclick="google()"><img src="google.png" width=30 height=30></a>
+  <a href="#Music" onclick="spotify()"><img src="musicfolder.png" width=30 height=30></a>
+  <a href="#Editor" onclick="editor()"><img src="editor.png" width=30 height=30></a>
+ 
+  
+  <div class="navbar-right">
+    <a href="#Help" onclick="changelog()"><img src="update.png" width=30 height=30></a>
+</div>
+
+<!-- Zeitanzeige Script-->
+<script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<script>
+var close = document.getElementsByClassName("closebtn");
+var i;
+
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function(){
+    var div = this.parentElement;
+    div.style.opacity = "0";
+    setTimeout(function(){ div.style.display = "none"; }, 600);
+  }
+}
+</script>
+<!--WEBBER links-->
+<script>
+function google() {
+  var myWindow = window.open("https://google.com", "", "width=600,height=600");
+}
+function youtube() {
+  var myWindow = window.open("https://youtube.com", "", "width=600,height=600");
+}
+function spotify() {
+  var myWindow = window.open("https://open.spotify.com/", "", "width=800,height=600");
+}
+function editor() {
+  var myWindow = window.open("webberwrite.html", "", "width=1500,height=750");
+}
+function help() {
+  var myWindow = window.open("faq.html", "", "width=600,height=600");
+}
+function changelog() {
+  var myWindow = window.open("https://webberannouncements.blogspot.com/", "", "width=600,height=600");
+}
+</script>
+</body>
+</html>
